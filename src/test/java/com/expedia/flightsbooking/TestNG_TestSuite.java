@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -19,7 +20,8 @@ public class TestNG_TestSuite {
 
 	@BeforeClass
 	public void beforeClass() {
-		driver = new FirefoxDriver();
+// 		driver = new FirefoxDriver();
+		driver = new ChromeDriver();
 		baseUrl = "https://www.expedia.com/";
 
 		// Maximize the browser's window
